@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Clinica Dental </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&family=Oleo+Script&family=Raleway:ital,wght@0,400;0,700;0,900;1,300;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+        <link rel="icon" href="img/1.png">
+    </head>
+    <body>
+
+        <div class = "container">
+
+            <h2 class="logo"><a href="#paciente"><img src="img/2.png">Clinica<span>Dental</span></a></h2>
+
+            <nav>
+             <ul>
+                <li> <a href="#paciente" onclick="showSection('paciente'); startBreeze() ">Pacientes</a></li>
+                <li> <a href="#citas" onclick="showSection('citas'); startBreeze()">Citas</a></li>
+                <li> <a href="#presupuesto" onclick="showSection('presupuesto'); startBreeze()">Presupuesto</a></li>
+                <li> <a href="#intervencion" onclick="showSection('intervencion'); startBreeze()">Intervencion</a></li>
+                <li> <a href="#materiales" onclick="showSection('materiales'); startBreeze()">Materiales</a></li>
+                <li> <a href="#cobros" onclick="showSection('cobros'); startBreeze()">Cobros</a></li>
+                <li> <a href="#servicios" onclick="showSection('servicios'); startBreeze()">Servicios</a></li>
+                <li> <a href="#especialistas" onclick="showSection('especialistas'); startBreeze()">Especialistas</a></li>
+                <li> <a href="#compras" onclick="showSection('compras'); startBreeze()">Compras</a></li>
+                <li> <a href="#honorarios" onclick="showSection('honorarios'); startBreeze()">Honorarios</a></li>
+                <li> <a href="#reportes" onclick="showSection('reportes'); startBreeze()">Reportes</a></li>
+             </ul>
+            </nav>
+              
+
+        </div>
+
+        <section id="especialistas" class="section especialistas-section">
+            <h1 class= "h">Especia<span>listas</span></h1>
+            <br>
+            <p class="mip">NOT FOUND</p>
+        </section>
+        
+
+        <script>
+            function showSection(sectionId) {
+     
+           const sections = document.querySelectorAll('.section');
+           sections.forEach(section => {
+             section.style.display = 'none';
+           });
+       
+           const selectedSection = document.getElementById(sectionId);
+           selectedSection.style.display = 'block';
+         }
+          </script>
+    </body>
+</html>
