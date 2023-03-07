@@ -7,42 +7,186 @@
         <title>Clinica Dental </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&family=Oleo+Script&family=Raleway:ital,wght@0,400;0,700;0,900;1,300;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="formulario.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
         <link rel="icon" href="img/1.png">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&family=Oleo+Script&family=Raleway:ital,wght@0,400;0,700;0,900;1,300;1,900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
     </head>
     <body>
 
         <div class = "container">
 
             <h2 class="logo"><a href="#paciente"><img src="img/2.png">Clinica<span>Dental</span></a></h2>
+            <button id="show-menu" onclick="showMenu()">Mostrar Menú</button>
+            <button id="ocultar-menu" onclick="ocultarMenu()">Ocultar menú</button>
 
-            <nav>
-             <ul>
-                <li> <a href="#paciente" onclick="showSection('paciente'); startBreeze() ">Pacientes</a></li>
-                <li> <a href="#citas" onclick="showSection('citas'); startBreeze()">Citas</a></li>
-                <li> <a href="#presupuesto" onclick="showSection('presupuesto'); startBreeze()">Presupuesto</a></li>
-                <li> <a href="#intervencion" onclick="showSection('intervencion'); startBreeze()">Intervencion</a></li>
-                <li> <a href="#materiales" onclick="showSection('materiales'); startBreeze()">Materiales</a></li>
-                <li> <a href="#cobros" onclick="showSection('cobros'); startBreeze()">Cobros</a></li>
-                <li> <a href="#servicios" onclick="showSection('servicios'); startBreeze()">Servicios</a></li>
-                <li> <a href="#especialistas" onclick="showSection('especialistas'); startBreeze()">Especialistas</a></li>
-                <li> <a href="#compras" onclick="showSection('compras'); startBreeze()">Compras</a></li>
-                <li> <a href="#honorarios" onclick="showSection('honorarios'); startBreeze()">Honorarios</a></li>
-                <li> <a href="#reportes" onclick="showSection('reportes'); startBreeze()">Reportes</a></li>
-             </ul>
-            </nav>
+
+            <div id="menu-container">
+              
+
+              <nav id="menu">
+                <ul>
+                  
+                  <li> <a href="#paciente" onclick="showSection('paciente'); ">Pacientes</a></li>
+                  <li> <a href="#citas" onclick="showSection('citas');">Citas</a></li>
+                  <li> <a href="#presupuesto" onclick="showSection('presupuesto');">Presupuesto</a></li>
+                  <li> <a href="#intervencion" onclick="showSection('intervencion');">Intervencion</a></li>
+                  <li> <a href="#materiales" onclick="showSection('materiales');">Materiales</a></li>
+                  <li> <a href="#cobros" onclick="showSection('cobros');">Cobros</a></li>
+                  <li> <a href="#servicios" onclick="showSection('servicios');">Servicios</a></li>
+                  <li> <a href="#especialistas" onclick="showSection('especialistas');">Especialistas</a></li>
+                  <li> <a href="#compras" onclick="showSection('compras');">Compras</a></li>
+                  <li> <a href="#honorarios" onclick="showSection('honorarios');">Honorarios</a></li>
+                  <li> <a href="#reportes" onclick="showSection('reportes');">Reportes</a></li>
+                </ul>
+              </nav>
+
+            </div>
+            
               
 
         </div>
+       
+        <div class = "container">
+            
+            <section id="especialistas" class="section especialistas-section">
+                <h1 class= "h">Especia<span class = "color">listas</span></h1>
+                <br>
+                
+                <h1>Registro de MMMMMMM</h1>
+                
+                <section>
+                    
+                  <form>
 
-        <section id="especialistas" class="section especialistas-section">
-            <h1 class= "h">Especia<span class = "color">listas</span></h1>
-            <br>
-            <p class="mip">NOT FOUND</p>
-        </section>
-        
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <br><br>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido">
+                    <br><br>
+
+                    <label for="tipo_identificacion">Tipo de identificación:</label>
+                        <select id="tipo_identificacion" name="tipo_identificacion">
+                        <option value="cedula">Selecciona</option>
+                        <option value="cedula">Cédula</option>
+                        <option value="pasaporte">Pasaporte</option>
+
+                        </select>
+
+                        <br>
+
+                        <div id="cedula_container">
+                            <br>
+                            
+                        <label for="cedula">Número de cédula:</label>
+                        <input type="text" id="cedula" name="cedula">
+                        </div>
+
+                        <div id="pasaporte_container" style="display:none;">
+                            <br>
+                        <label for="pasaporte">Número de pasaporte:</label>
+                        <input type="text" id="pasaporte" name="pasaporte">
+                        </div>
+                        <br>
+                        
+                    
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad " style="width: 70px;">
+                    <br><br> 
+                    
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                    <br><br>
+                          
+
+                    <label for="pais">Pais de origen:</label>
+                    <input type="text" id="pais" name="pais">
+                    <br><br>
+
+                    <label for="lugar_de_estudios">Centro Academico:</label>
+                    <input type="text" id="lugar_de_estudios" name="lugar_de_estudios">
+                    <br><br>
+
+                    <label for="academico">Nivel Academico:</label>
+                    <select id = "academico" name="academico">
+
+                        <option value="selecciona">Selecciona</option>
+                        <option value="tecnico">Tecnico</option>
+                        <option value="nivel_superior">Nivel Superior</option>
+                        <option value="grado">Grado</option>
+                        <option value="maestria">Maestria</option>
+                        <option value="doctorado">Doctorado</option>
+                        <option value="especialidad">Especialidad</option>
+
+
+                    </select>
+                    <br><br>
+
+                    <label for="especialidad">Especialidad:</label>
+
+                    <select id="especialidad" name="especialidad">
+
+                      <option value="Selecciona">Selecciona</option>
+                      <option value="Periodoncia">Periodoncia</option>
+                      <option value="Endodoncia">Endodoncia</option>
+                      <option value="Odontopediatria">Odontopediatria</option>
+                      <option value="Rehabilitacion Oral">Rehabilitacion Oral</option>
+                      <option value="Maxilo facial">Maxilo facial</option>
+                      <option value="Ortodoncia">Ortodoncia</option>
+                    </select>
+                    <br><br>
+
+                    <input type="submit" value="Registrar">
+
+                    <br><br><br>
+                  </form>
+            </section>
+        </div>
+
+
+        <script>
+
+        const form = document.querySelector('form');
+        const nombre = document.getElementById('nombre');
+        const apellido = document.getElementById('apellido');
+        const tipo_identificacion = document.getElementById('tipo_identificacion');
+        const cedula = document.getElementById('cedula');
+        const pasaporte = document.getElementById('pasaporte');
+        const edad = document.getElementById('edad');
+        const pais = document.getElementById('pais');
+        const lugar_de_estudios = document.getElementById('lugar_de_estudios');
+        const academico = document.getElementById('academico');
+        const fecha_nacimiento = document.getElementById('fecha_nacimiento');
+        const especialidad = document.getElementById('especialidad');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = {
+        nombre: nombre.value,
+        apellido: apellido.value,
+        tipo_identificacion: tipo_identificacion.value,
+        cedula: cedula.value,
+        pasaporte: pasaporte.value,
+        edad: edad.value,
+        pais: pais.value,
+        lugar_de_estudios: lugar_de_estudios.value,
+        academico: academico.value,
+        fecha_nacimiento: fecha_nacimiento.value,
+        especialidad: especialidad.value,
+    };
+    localStorage.setItem('datos', JSON.stringify(data));
+    alert('Datos guardados exitosamente.');
+    form.reset();
+});
+
+
+        </script>
+
 
         <script>
             function showSection(sectionId) {
@@ -56,5 +200,40 @@
            selectedSection.style.display = 'block';
          }
           </script>
+
+          <script>
+            var tipoIdentificacion = document.getElementById("tipo_identificacion");
+            var cedulaContainer = document.getElementById("cedula_container");
+            var pasaporteContainer = document.getElementById("pasaporte_container");
+
+            tipoIdentificacion.addEventListener("change", function() {
+                if (tipoIdentificacion.value === "cedula") {
+                cedulaContainer.style.display = "block";
+                pasaporteContainer.style.display = "none";
+                } else if (tipoIdentificacion.value === "pasaporte") {
+                cedulaContainer.style.display = "none";
+                pasaporteContainer.style.display = "block";
+                }
+              });
+           </script>
+
+
+           <script>
+function ocultarMenu() {
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("ocultar-menu").style.display = "none";
+  document.getElementById("show-menu").style.display = "block";
+  document.getElementById("show-menu").style.visibility = "visible";
+  document.getElementById("ocultar-menu").style.visibility = "hidden";
+}
+
+function showMenu() {
+  document.getElementById("menu").style.display = "block";
+  document.getElementById("show-menu").style.display = "none";
+  document.getElementById("ocultar-menu").style.display = "block";
+  document.getElementById("ocultar-menu").style.visibility = "visible";
+}
+
+           </script>
     </body>
 </html>
