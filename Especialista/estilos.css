@@ -64,16 +64,21 @@ nav{
 
 button {
   padding: 10px 20px;
-  border: none;
-  background-color: #0077FF;
+  border: 2px solid #10bbf0;
+  position: fixed;
   color: white;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  top: 0;
+  left: 90;
+  width: 10vw;
+  margin: 0;
+  transition: 0.3s;
 }
 
 button {
-  background-color: #0055CC;
+  background-color: #10bbf0;
 }
 
 
