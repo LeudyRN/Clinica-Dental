@@ -63,14 +63,11 @@ nav{
 }
 
 button {
-  padding: 10px 20px;
-  border: 2px solid #10bbf0;
+  border:none;
   position: fixed;
-  color: white;
   font-weight: bold;
-  border-radius: 5px;
   cursor: pointer;
-  top: 0;
+  top: 5px;
   left: 90;
   width: 10vw;
   margin: 0;
@@ -118,8 +115,17 @@ left: 0;
 width: 100vw;
 margin: 0;
     
-      
-    
+  }
+
+  #ocultar-menu, #show-menu {
+   
+    background-color: #10bbf0;
+    position: fixed;
+    color: #ffffff;
+    top: 30px;
+    left: 1000px;
+    margin: 0;
+
   }
   
   h2 a {

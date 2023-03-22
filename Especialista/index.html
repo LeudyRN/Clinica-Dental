@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="estilos.css">
         <link rel="stylesheet" href="formulario.css">
+        <script src="metodos.js"></script>
         <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
         <link rel="icon" href="img/1.png">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&family=Oleo+Script&family=Raleway:ital,wght@0,400;0,700;0,900;1,300;1,900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
 
         <div class = "container">
 
-            <h2 class="logo"><a href="#paciente"><img src="img/2.png">Clinica<span>Dental</span></a></h2>
+            <h2 class="logo"><a href="#paciente" onclick="showSection('paciente'); "><img src="img/2.png">Clinica<span>Dental</span></a></h2>
 
             <div class="botones-header"> 
             <button id="show-menu" onclick="showMenu()">Mostrar Menú</button>
@@ -61,7 +62,7 @@
                 
                 <section>
                     
-                  <form>
+                  <form class ="containerGrid">
 
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre">
@@ -72,7 +73,7 @@
                     <br><br>
 
                     <label for="tipo_identificacion">Tipo de identificación:</label>
-                        <select id="tipo_identificacion" name="tipo_identificacion">
+                        <select id="tipo_identificacion" name="tipo_identificacion" onclick="datos()">
                         <option value="cedula">Selecciona</option>
                         <option value="cedula">Cédula</option>
                         <option value="pasaporte">Pasaporte</option>
@@ -143,99 +144,15 @@
                     </select>
                     <br><br>
 
-                    <input type="submit" value="Registrar">
+                    <input type="submit" value="Registrar" onclick="guardar()">
 
                     <br><br><br>
                   </form>
             </section>
+
         </div>
+      
+        
 
-
-        <script>
-
-        const form = document.querySelector('form');
-        const nombre = document.getElementById('nombre');
-        const apellido = document.getElementById('apellido');
-        const tipo_identificacion = document.getElementById('tipo_identificacion');
-        const cedula = document.getElementById('cedula');
-        const pasaporte = document.getElementById('pasaporte');
-        const edad = document.getElementById('edad');
-        const pais = document.getElementById('pais');
-        const lugar_de_estudios = document.getElementById('lugar_de_estudios');
-        const academico = document.getElementById('academico');
-        const fecha_nacimiento = document.getElementById('fecha_nacimiento');
-        const especialidad = document.getElementById('especialidad');
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = {
-        nombre: nombre.value,
-        apellido: apellido.value,
-        tipo_identificacion: tipo_identificacion.value,
-        cedula: cedula.value,
-        pasaporte: pasaporte.value,
-        edad: edad.value,
-        pais: pais.value,
-        lugar_de_estudios: lugar_de_estudios.value,
-        academico: academico.value,
-        fecha_nacimiento: fecha_nacimiento.value,
-        especialidad: especialidad.value,
-    };
-    localStorage.setItem('datos', JSON.stringify(data));
-    alert('Datos guardados exitosamente.');
-    form.reset();
-});
-
-
-        </script>
-
-
-        <script>
-            function showSection(sectionId) {
-     
-           const sections = document.querySelectorAll('.section');
-           sections.forEach(section => {
-             section.style.display = 'none';
-           });
-       
-           const selectedSection = document.getElementById(sectionId);
-           selectedSection.style.display = 'block';
-         }
-          </script>
-
-          <script>
-            var tipoIdentificacion = document.getElementById("tipo_identificacion");
-            var cedulaContainer = document.getElementById("cedula_container");
-            var pasaporteContainer = document.getElementById("pasaporte_container");
-
-            tipoIdentificacion.addEventListener("change", function() {
-                if (tipoIdentificacion.value === "cedula") {
-                cedulaContainer.style.display = "block";
-                pasaporteContainer.style.display = "none";
-                } else if (tipoIdentificacion.value === "pasaporte") {
-                cedulaContainer.style.display = "none";
-                pasaporteContainer.style.display = "block";
-                }
-              });
-           </script>
-
-
-           <script>
-function ocultarMenu() {
-  document.getElementById("menu").style.display = "none";
-  document.getElementById("ocultar-menu").style.display = "none";
-  document.getElementById("show-menu").style.display = "block";
-  document.getElementById("show-menu").style.visibility = "visible";
-  document.getElementById("ocultar-menu").style.visibility = "hidden";
-}
-
-function showMenu() {
-  document.getElementById("menu").style.display = "block";
-  document.getElementById("show-menu").style.display = "none";
-  document.getElementById("ocultar-menu").style.display = "block";
-  document.getElementById("ocultar-menu").style.visibility = "visible";
-}
-
-           </script>
     </body>
 </html>
